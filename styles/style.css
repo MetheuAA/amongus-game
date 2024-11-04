@@ -116,3 +116,125 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
 }
+
+.led {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    border: solid 5px #202020;
+    background-image: url(../svg/led.svg);
+    background-size: countain;
+    box-shadow: -2px 7px #827e7f;
+}
+
+.painelMemory {
+position: relative;
+display: grid;
+grid-template-columns: repeat(3, 33.3%);
+grid-template-rows: repeat(3, 33.3%);
+margin: 25px 0;
+}
+.memory {
+     border-radius: 6px;
+     width: 100%¨;
+     height: 100%;
+}
+
+.memoryActive {
+    animation: mActive 0.3s;
+}
+
+@keyframes mActive {
+    to {
+        background: #44a8fe;
+    }
+}
+.ledOn {
+    border: solid 5px #202020;
+    background-image: url(../svg/leedgreen.svg);
+    background-size: contain;
+}
+
+.playMemory {
+    display: grid;
+}
+
+.player_memory {
+        background: #686868;
+        box-shadow: 0px 0px 0px 4px rgb (10, 10, 10);
+        border: inset 4px #505050;
+        border-radius: 4px;
+        cursor: not-allowed;
+    }
+
+    .playerMemoryActive {
+        background: #c7c0c0;
+        box-shadow: 0px 0px 0px 4px rgb (10, 10, 10);
+        border: inset 4px #505050;
+        cursor: pointer;
+    }
+
+.playerMemoryError {
+        animation: errorMemory 0.2s;
+        animation-iteration-count: 4;
+    }
+
+    .playerLedError {
+        animation: errorLed 0.2s;
+        animation-iteration-count: 4;
+    }
+
+    .playerMemoryComplete {
+        animation: completeMemory 0.2s;
+        animation-iteration-count: 4;
+    }
+
+    .playerLedComplete {
+        animation: completeLed 0.2s;
+        animation-iteration-count: 4;
+    }
+
+    .last {
+        box-shadow: 0px 0px 0px 4px rgb (10, 10, 10), 2px 22px 0px -9px #575757, 1px 18px 0px 2px #6a6a6a;
+    }
+
+    .teste {
+        font-size: 3rem;
+    }
+
+    @keyframes errorLed{
+        to {
+            border: solid 5px #202020;
+            background-image: url(../svg/ledred.svg);
+        }
+    }
+    @keyframes errorMemory {
+        to {
+            background: #af0f0f;
+            box-shadow: 0px 0px 0px 4px #952c01 !important;
+            border: inset 4px #200200;
+        }
+    }
+
+    @keyframes completeLed {
+        to {
+            border: solid 5px #202020;
+            background-image: url(../svg/leedgreen.svg);
+        }
+    }
+
+    @keyframes completeMemory {
+        to {
+            background: #00c000;
+            box-shadow: 0px 0px 0px 4px #017a01 !important;
+            border: inset 4px #200200;
+        }
+    }
+
+@keyframes playerMemoryClick {
+    to {
+        background: #289cbf;
+        box-shadow: 0px 0px 0px 4px #133e71;
+        border: inset 4px #03182e;
+    }
+}
