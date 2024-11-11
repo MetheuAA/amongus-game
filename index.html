@@ -47,15 +47,15 @@
                     <div class="led lv15.1"></div>
                 </div>
                 <div class="playerMemory">
-                    <div class="player_memory"></div>
-                    <div class="player_memory"></div>
-                    <div class="player_memory"></div>
-                    <div class="player_memory"></div>
-                    <div class="player_memory"></div>
-                    <div class="player_memory"></div>
-                    <div class="player_memory last"></div>
-                    <div class="player_memory last"></div>
-                    <div class="player_memory last"></div>
+                    <div data-memory='0' class="player_memory"></div>
+                    <div data-memory='1' class="player_memory"></div>
+                    <div data-memory='2' class="player_memory"></div>
+                    <div data-memory='3' class="player_memory"></div>
+                    <div data-memory='4' class="player_memory"></div>
+                    <div data-memory='5' class="player_memory"></div>
+                    <div data-memory='6' class="player_memory last"></div>
+                    <div data-memory='7' class="player_memory last"></div>
+                    <div data-memory='8' class="player_memory last"></div>
                 </div>
             </div>
         </div>
@@ -67,5 +67,21 @@
             <div class="glass"></div>
         </div>
     </div>
+    <script> 
+        const loadButton = document.getElementById("loadButton");
+        const startButton = document.getElementById("startButton");
+
+        loadButton.addEventListener("click", () => {
+            startReactor.load()
+            loadButton.style.display = "none"
+            startButton.style.display = ""
+        })
+
+        startButton.addEventListener("click", () => {
+            startReactor.load()
+            startButton.style.display = "none"
+            loadButton.style.display = ""
+        })
+    </script>
 </body>
 </html>
